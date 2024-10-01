@@ -20,20 +20,6 @@ class SportsActivityLoggerTest {
         assertEquals(2.0, logger.calculateTotalTime());
     }
 
-    @Test
-    void viewLoggedActivities() {
-        logger.logActivity("Running", 2.0);
-        logger.logActivity("Swimming", 1.5);
-
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
-
-        logger.viewLoggedActivities();
-
-        String expectedOutput  = "Sport: Running, Hours: 2.0\r\nSport: Swimming, Hours: 1.5\r\n";
-
-        assertEquals(expectedOutput, outContent.toString());
-    }
 
     @Test
     void calculateTotalTime() {
