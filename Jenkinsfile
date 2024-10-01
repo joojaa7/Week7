@@ -13,7 +13,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from Git repository
-                git 'https://github.com/joojaa7/Week7'
+                git branch: 'main', url: 'https://github.com/joojaa7/Week7'
             }
         }
         stage('Build Docker Image') {
